@@ -1,23 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import Numbers from './components/Numbers'
+import About from './components/About'
+import Projects from './components/Projects'
+import Services from './components/Services'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
+
 
 function App() {
+
+  function getTotalLineHeight(element) {
+    const style = getComputedStyle(element);
+    const lineHeight = parseInt(style.lineHeight);
+    const paddingTop = parseInt(style.paddingTop);
+    const paddingBottom = parseInt(style.paddingBottom);
+    const borderTopWidth = parseInt(style.borderTopWidth);
+    const borderBottomWidth = parseInt(style.borderBottomWidth);
+  
+    return (lineHeight + paddingTop + paddingBottom + borderTopWidth + borderBottomWidth);
+  }
+
+  const [lineHeight, setLineHeight] = useState(null);
+
+  useEffect(() => {
+    const element = document.getElementById('pageWrapper');
+    const totalLineHeight = getTotalLineHeight(element);
+    setLineHeight(totalLineHeight);
+  }, []);
+  
+  console.log(lineHeight)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col sm:flex-row relative font-fira bg-darker-900">
+      <Header/>
+      <Numbers getTotalLineHeight={lineHeight}/>
+      
+      <div id='pageWrapper' className='relative left-14 sm:none sm:left-0 flex-col m-4 w-3/4 sm:w-2/3 text-white'>
+        <Hero/>
+        <About/>
+        <Projects/>
+        <Skills/>
+        <Services/>
+        <Contact/>
+        <Footer/>
+      </div>
     </div>
   );
 }
