@@ -5,9 +5,9 @@ export default function About(){
 
     return (
     <section id='about' className='my-10 min-h-[75vh]'>
-        <h2 className='text-2xl sm:text-4xl font-semibold'>About<span className='animate-pulse text-darker-700'>|</span></h2>
-        <div className='flex flex-col-reverse md:flex-row my-10 justify-center'>
-            <div className='w-full md:w-1/2'>
+        <h2 className='text-2xl sm:text-4xl font-semibold text-blue-500'>About<span className='animate-pulse text-darker-700'>|</span></h2>
+        <div className='flex flex-col-reverse lg:flex-row my-10 justify-center'>
+            <div className='w-full lg:w-1/2'>
                 <p className='my-5'> I'm a software engineer with a background in law, business and non-profit management. My experience has given me a unique understanding of the challenges facing businesses small and large.</p>
 
                 <p className='my-5'>
@@ -24,7 +24,7 @@ export default function About(){
                 <p className='text-xs my-4'>*from my highly curated gif collection</p>
 
             </div>
-            <div className='w-full md:w-1/2'>
+            <div className='w-full lg:w-1/2'>
                 <div className='mx-auto p-2 w-2/3 '>
                     <img src={HeadShot} alt="Kate Ives"  />
                     

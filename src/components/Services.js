@@ -7,8 +7,8 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 export default function Services(){
     
     return (
-      <section className='min-h-[75vh] my-10'>
-        <h2 className='text-2xl sm:text-4xl font-semibold my-10 '>Services<span className='animate-pulse text-darker-700'>|</span></h2>
+      <section className='min-h-[75vh] my-10' id='services'>
+        <h2 className='text-2xl sm:text-4xl font-semibold my-10 text-blue-500'>Services<span className='animate-pulse text-darker-700'>|</span></h2>
         
         <div className='flex flex-row flex-no-wrap gap-6 overflow-x-auto my-4 '>
           <div className='flex-shrink-0 flex flex-col p-10 w-[400px] border-darker-300 border-2 rounded-md'>

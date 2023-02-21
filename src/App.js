@@ -1,5 +1,4 @@
 import './App.css';
-import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -13,28 +12,10 @@ import Contact from './components/Contact'
 
 function App() {
 
-  function getTotalLineHeight(element) {
-    const style = getComputedStyle(element);
-    const lineHeight = parseInt(style.height)
-    
-    //const divHeight = +style.offsetHeight
-    return Number(lineHeight)
-  }
-
-  const [lineHeight, setLineHeight] = useState(null);
-
-  useEffect(() => {
-
-    const element = document.getElementById('pageWrapper');
-    const totalLineHeight = getTotalLineHeight(element);
-    setLineHeight(totalLineHeight);
-  }, []);
-  
-  console.log(lineHeight)
   return (
-    <div className="flex flex-col sm:flex-row relative font-fira bg-darker-900 ">
+    <div id="home" className="flex flex-col sm:flex-row relative font-fira bg-darker-900 scroll-smooth">
       <Header/>
-      <Numbers getTotalLineHeight={lineHeight}/>
+      <Numbers/>
       
       <div id='pageWrapper' className='relative left-14 sm:none sm:left-0 flex-col leading-6 m-4 w-3/4 sm:w-2/3 text-white'>
         <Hero/>

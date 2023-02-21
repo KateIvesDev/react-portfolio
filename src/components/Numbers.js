@@ -1,4 +1,4 @@
-export default function Numbers( { getTotalLineHeight } ){
+export default function Numbers(){
 
   
     let lines = 210
