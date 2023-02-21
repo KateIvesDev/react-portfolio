@@ -23,7 +23,7 @@ const projectData = [
     'github_url': 'https://github.com/KateIvesDev/quizzical'
     },
     {
-    'id': 'project-3',
+    'id': 'project-4',
     'project_title': 'Space Tourism Website',
     'tech_stack': 'JavaScript, React, React Router, Vite, Tailwind CSS, HTML,Github, Git, Figma',
     'img_url': SpaceGif,
@@ -32,24 +32,23 @@ const projectData = [
     'github_url': 'https://github.com/KateIvesDev/Space-Tourism'
     },
     {
-        'id': 'project-4',
-        'project_title': 'Calculator with Adjustable Color Theme',
-        'tech_stack': 'JavaScript, Sass/Scss, HTML, Github, Git, Figma',
-        'img_url': CalcGif,
-        'description': 'Calculator web application that allows users to perform basic math operations. Mobile-first workflow. Checks for users preferred color scheme and saves color preference to Local Storage. Built to adhere to Figma design prototype.',
-        'live_url': 'https://kateivesdev.github.io/CalculatorApp',
-        'github_url': 'https://github.com/KateIvesDev/CalculatorApp'
-
+    'id': 'project-5',
+    'project_title': 'Calculator with Adjustable Color Theme',
+    'tech_stack': 'JavaScript, Sass/Scss, HTML, Github, Git, Figma',
+    'img_url': CalcGif,
+    'description': 'Calculator web application that allows users to perform basic math operations. Mobile-first workflow. Checks for users preferred color scheme and saves color preference to Local Storage. Built to adhere to Figma design prototype.',
+    'live_url': 'https://kateivesdev.github.io/CalculatorApp',
+    'github_url': 'https://github.com/KateIvesDev/CalculatorApp'
     },
     {
-        'id': 'project-1',
-         'project_title': 'Pet Sitter Website',
-         'tech_stack': 'Wordpress, Figma, Google Workspace, SEO',
-         'img_url': EmilyGif,
-         'description': 'Wordpress website for a local pet sitter client. Conceptualized design in Figma. Mobile-first workflow. Created and implemented SEO strategy and provided copywriting services.',
-         'live_url': 'https://www.emilysayssit.com',
-         'github_url': ''
-        },
+    'id': 'project-1',
+    'project_title': 'Pet Sitter Website',
+    'tech_stack': 'Wordpress, Figma, Google Workspace, SEO',
+    'img_url': EmilyGif,
+    'description': 'Wordpress website for a local pet sitter client. Conceptualized design in Figma. Mobile-first workflow. Created and implemented SEO strategy and provided copywriting services.',
+    'live_url': 'https://www.emilysayssit.com',
+    'github_url': ''
+   },
 
 ]
 

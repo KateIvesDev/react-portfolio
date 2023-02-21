@@ -6,18 +6,18 @@ import LinkedinSVG from "./svg/linkedin";
 export default function Contact(){
 
     return (
-    <section className='py-16 min-h-[75vh] flex flex-col md:flex-row gap-4' id='contact'>
-        <div className='w-full md:w-1/2'>
+    <section className='py-16 min-h-[75vh] flex flex-col md:flex-row gap-4 w-11/12' id='contact'>
+        <div className='w-full md:w-1/2 my-2'>
             <h2 className='text-2xl sm:text-4xl font-semibold text-blue-500'>Let's Connect<span className='animate-pulse text-darker-700'>|</span></h2>
             <p className='my-10'>Need a developer for your next project or startup? Have a problem you are trying to solve? Just want to talk more about tech? Let's connect! Send me a message here or connect on social media.</p>
             <section className='flex flex-row'>
-                <a href='https://www.linkedin.com/in/kateivesdev' target='_blank' rel='noreferrer'><LinkedinSVG/></a>
-                <a href='https://www.github.com/kateivesdev' target='_blank' rel='noreferrer'><GithubSVG/></a> 
-                <a href='https://www.twitter.com/kateivesdev' target='_blank' rel='noreferrer'><TwitterSVG/></a> 
+                <a href='https://www.linkedin.com/in/kateivesdev' target='_blank' rel='noreferrer' aria-label='Visit Kate Ives LinkedIn profile'><LinkedinSVG/></a>
+                <a href='https://www.github.com/kateivesdev' target='_blank' rel='noreferrer' aria-label='Visit Kate Ives Github profile'><GithubSVG/></a> 
+                <a href='https://www.twitter.com/kateivesdev' target='_blank' rel='noreferrer' aria-label='Visit Kate Ives Twitter profile'><TwitterSVG/></a> 
             </section>
             
         </div>
-        <div className='w-full md:w-1/2'>
+        <div className='w-full md:w-1/2 my-2'>
             <form name="contact" method="POST" netlify-honeypot="bot-field"
             data-netlify="true" className="w-full flex flex-col leading-8">
               
