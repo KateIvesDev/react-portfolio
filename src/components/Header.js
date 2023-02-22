@@ -6,16 +6,16 @@ export default function Header(){
 
     const [isExpandedMM, setExpandedMM] = useState(false)
 
-    let expanded = 'absolute top-16 right-0 p-10 bg-[#1d1e26] sm:block h-screen'
-    let notExpanded = 'hidden sm:block'
+    let expanded = 'absolute top-16 right-0 p-10 bg-[#1d1e26] md:block h-screen'
+    let notExpanded = 'hidden md:block'
 
     return (
-        <header className='bg-[#1d1e26] p-4 w-full sm:w-11/12 flex flex-row sm:flex-col justify-between sm:h-screen fixed sm:sticky sm:top-0 text-dark-300 z-40'>
+        <header className='bg-[#1d1e26] p-4 w-full flex flex-row md:flex-col justify-between md:h-screen fixed md:sticky md:top-0 text-dark-300 z-40'>
             <div className='flex flex-row'>
                 <span className='text-2xl text-buffy hover:text-buffy-500 uppercase'>Kate Ives</span>
             </div>
 
-            <div className='sm:hidden w-1/2 text-right onMouseEnter={() =>setExpandedMM(true)}'>
+            <div className='md:hidden w-1/2 text-right onMouseEnter={() =>setExpandedMM(true)}'>
                 <button onClick={()=> setExpandedMM(true)} aria-label='Mobile Menu'>
                     <FontAwesomeIcon icon={solid('bars')} className='text-dracula text-2xl' /> 
                 </button>
@@ -55,7 +55,7 @@ export default function Header(){
                     </li>
                 </ul>
             </nav>
-            <ul className="hidden sm:block">
+            <ul className="hidden md:block">
                 <li className='text-blade hover:text-blade-800'>
                     <a href='https://www.github.com/kateivesdev' target='_blank' rel='noreferrer'>Github</a></li>
                 <li className='text-blade hover:text-blade-800'>

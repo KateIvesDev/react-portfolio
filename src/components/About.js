@@ -13,7 +13,7 @@ export default function About(){
 
     const [allGifs, setAllGifs] = useState([])
 
-    function getData() {
+    async function getData() {
 
         const apiKey = process.env.REACT_APP_GIPHY_API
         return fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=puppy&limit=100&offset=0&rating=g&lang=en`)
@@ -58,11 +58,9 @@ export default function About(){
                 <div className='relative'>
                     <img src={gif.randomImage} alt="gif" className={gif.randomImage ? 'block my-10' : 'hidden'}></img>
                     <FontAwesomeIcon icon={solid('xmark')} className={gif.randomImage ? 'text-white text-2xl absolute top-0 p-2 cursor-pointer' : 'hidden'} aria-label='close gif' onClick={()=> setGif({randomImage: ''})}/> 
-                   
                 </div>
-                
 
-                <SolidButton  id='gifBtn' name='Click for a Cute Gif' handleClick={handleClick}/>
+                <SolidButton  id='gifBtn' name='Puppy Gif Generator' handleClick={handleClick}/>
             <p className={newGifUrl ? 'block text-xs my-4' : 'hidden'}>Powered By <a href='https://developers.giphy.com/' className='text-blade-800 hover:text-blade' aria-label='Visit the GIPHY website'>GIPHY. </a> A random puppy gif is pulled from the GIPHY API.</p>
             </div>
             <div className='w-full lg:w-1/2'>

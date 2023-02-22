@@ -24,8 +24,8 @@ export default function Hero(){
 
 
     return (
-    <section className='my-10 sm:min-h-[90vh] flex flex-col lg:flex-row flex-nowrap items-center'>
-        <div className='lg:w-3/4 py-10 flex-col justify-center'>
+    <section className='my-10 min-h-[90vh] flex flex-col justify-center lg:flex-row flex-nowrap'>
+        <div className='lg:w-3/4 py-10 flex-col self-center'>
             <h1 className='font-semibold text-xl md:text-4xl py-2'>Hi, I'm <span className='text-buffy'>Kate Ives</span></h1>
             <h2 className='text-2xl sm:text-3xl py-4 text-blue-500'>Full Stack Software Engineer</h2>
             <p className='text-xl py-4 text-blade'>

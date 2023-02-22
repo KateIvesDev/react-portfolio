@@ -6,7 +6,7 @@ import LinkedinSVG from "./svg/linkedin";
 export default function Contact(){
 
     return (
-    <section className='py-16 min-h-[75vh] flex flex-col md:flex-row gap-4 w-11/12' id='contact'>
+    <section className='py-16 min-h-[75vh] flex flex-col md:flex-row gap-4' id='contact'>
         <div className='w-full md:w-1/2 my-2'>
             <h2 className='text-2xl sm:text-4xl font-semibold text-blue-500'>Let's Connect<span className='animate-pulse text-darker-700'>|</span></h2>
             <p className='my-10'>Need a developer for your next project or startup? Have a problem you are trying to solve? Just want to talk more about tech? Let's connect! Send me a message here or connect on social media.</p>
