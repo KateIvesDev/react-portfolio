@@ -12,7 +12,7 @@ export default function Projects(){
                     <h3 className='text-xl md:text-2xl text-blue-500 px-2'>{proj.project_title}</h3>
                     <h4 className='text-sm uppercase py-2 tracking-widest'>Technologies</h4>
                     <p className='text-sm uppercase text-yellow px-4'>{proj.tech_stack}</p>
-                    <p className='text-justify p-2'>{proj.description}</p>
+                    <p className='p-2'>{proj.description}</p>
                     <div className='flex flex-row justify-center'>
                         <a href={proj.live_url} className='text-blade hover:text-blade-800 mx-2 border-blade hover:border-blade-800 border px-2 py-1 rounded-md w-1/4' target='_blank' rel='noreferrer' aria-label='View the live website for this project'>Live</a>
 
