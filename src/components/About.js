@@ -3,7 +3,7 @@ import HeadShot from '../assets/kwi-1.jpg'
 import SolidButton from './Buttons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
-
+import animate from './animate'
 
 export default function About(){
 
@@ -39,8 +39,10 @@ export default function About(){
 
     let newGifUrl = gif.randomImage
 
+    animate()
+
     return (
-    <section id='about' className='my-10 pt-16 min-h-[75vh]'>
+    <section id='about' className='my-10 pt-16 min-h-[75vh] js-show-on-scroll'>
         <h2 className='text-2xl sm:text-4xl font-semibold text-blue-500'>About<span className='animate-pulse text-darker-700'>|</span></h2>
         <div className='flex flex-col-reverse lg:flex-row my-10 justify-center'>
             <div className='w-full lg:w-1/2'>
@@ -56,7 +58,7 @@ export default function About(){
                 <p className='my-5'>In my free time, you will find me working on home improvement projects, running around with my dog, collecting vinyl with my husband or organizing a Google Developer Group tech meetup!</p>
 
                 <div className='relative'>
-                    <img src={gif.randomImage} alt="gif" className={gif.randomImage ? 'block my-10' : 'hidden'}></img>
+                    <img src={gif.randomImage} alt='gif' className={gif.randomImage ? 'block my-10' : 'hidden'}></img>
                     <FontAwesomeIcon icon={solid('xmark')} className={gif.randomImage ? 'text-white text-2xl absolute top-0 p-2 cursor-pointer' : 'hidden'} aria-label='close gif' onClick={()=> setGif({randomImage: ''})}/> 
                 </div>
 
@@ -65,11 +67,11 @@ export default function About(){
             </div>
             <div className='w-full lg:w-1/2'>
                 <div className='mx-auto p-2 w-2/3 text-center'>
-                    <img src={HeadShot} alt="Kate Ives" className='mb-4'/>
+                    <img src={HeadShot} alt='Kate Ives' className='mb-4'/>
                 </div>
             </div>
-        
-     </div>
+        </div>
     </section> 
+    
     )
 }

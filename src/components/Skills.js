@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
-
+import animate from './animate'
 import SolidButton from './Buttons' 
 
 export default function Skills(){
@@ -50,16 +50,18 @@ export default function Skills(){
 
     const softSkills =['Quick to Adapt', 'Fast Learner', 'Business Acumen', 'Conflict Resolution', 'Copywriting', 'Empathy', 'Focused', 'Risk Analysis', 'Persistence']
 
+    animate()
+
     return (
-    <section id='skills' className='my-10 min-h-[75vh] pt-16'>
+    <section id='skills' className='my-10 min-h-[75vh] pt-16 js-show-on-scroll'>
         <h2 className='text-2xl sm:text-4xl font-semibold my-10 text-blue-500'>Skills<span className='animate-pulse text-darker-700'>|</span></h2>
     
         <div className=''>
             <h3 className='text-lg lg:text-xl'>Tech Skills</h3>
             <ul className='flex flex-row flex-wrap gap-6 my-10 text-lincoln text-base lg:text-xl'>
                 {techSkills.map((skill,index) => {
-                    const id = "techskill-"+index
-                    return <li key={id} className='bg-darker-700 px-4 py-1 rounded-md'>{skill}</li>
+                    const id = 'techskill-'+index
+                    return <li key={id} className='bg-darker-700 px-4 py-1 rounded-md m-1'>{skill}</li>
                 })}
             </ul>
         </div>
@@ -67,15 +69,15 @@ export default function Skills(){
                 <h3 className='text-xl'>Soft Skills</h3>
                 <ul className='flex flex-row flex-wrap gap-6 my-10 text-cyan text-base lg:text-xl'>
                 {softSkills.map((skill, index) => {
-                    const id = "softskill-"+index
-                    return <li key={id} className='bg-darker-700 px-4 py-1 rounded-md'>{skill}</li>
+                    const id = 'softskill-'+index
+                    return <li key={id} className='bg-darker-700 px-4 py-1 rounded-md m-1'>{skill}</li>
                 })}
             </ul>
         </div>
         <div className='relative'>
             <h3 className='text-xl'>Code Challenges</h3>
-            <p className='my-5 text-xl'>As of <span className='text-buffy font-semibold'>{currDay}</span>, I've completed <span className='text-buffy font-semibold '>{totalKata}</span> code challenges in JavaScript on CodeWars! Click below for a up-to-date list of my completed challenges.</p>
-            <div id="kata-list" className={isOpen ? 'relative bg-dracula h-[75vh] w-full md:w-2/3 text-darker overflow-scroll p-10 z-50 box-shadow-md my-10' : 'hidden'}>
+            <p className='my-5 text-base md:text-xl'>As of <span className='text-buffy font-semibold'>{currDay}</span>, I've completed <span className='text-buffy font-semibold '>{totalKata}</span> code challenges in JavaScript on CodeWars! Click below for a up-to-date list of my completed challenges.</p>
+            <div id='kata-list' className={isOpen ? 'relative bg-dracula h-[75vh] w-full md:w-2/3 text-darker overflow-scroll p-10 z-50 box-shadow-md my-10' : 'hidden'}>
                 <h5 className='font-bold text-xl'>Kate's CodeWars Challenges</h5>
                 <FontAwesomeIcon icon={solid('xmark')} onClick={()=> setIsOpen(false)} className='absolute top-0 right-0 p-6 font-semibold text-3xl cursor-pointer'/>
                 <p>Data pulled from the CodeWars API.</p>

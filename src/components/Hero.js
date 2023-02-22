@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
-import SolidButton, {OutlineButton } from "./Buttons"
+import SolidButton, {OutlineButton } from './Buttons'
 import Typed from 'typed.js'
+import animate from './animate'
 
 export default function Hero(){
 
@@ -22,13 +23,15 @@ export default function Hero(){
         }
     }, [])
 
+    animate()
+
 
     return (
-    <section className='my-10 min-h-[90vh] flex flex-col justify-center lg:flex-row flex-nowrap'>
+    <section className='my-10 min-h-[90vh] flex flex-col justify-center lg:flex-row flex-nowrap js-show-on-scroll'>
         <div className='lg:w-3/4 py-10 flex-col self-center'>
             <h1 className='font-semibold text-xl md:text-4xl py-2'>Hi, I'm <span className='text-buffy'>Kate Ives</span></h1>
             <h2 className='text-2xl sm:text-3xl py-4 text-blue-500'>Full Stack Software Engineer</h2>
-            <p className='text-xl py-4 text-blade'>
+            <p className='text-base md:text-xl py-4 text-blade'>
                     <span style = {{whiteSpace: 'pre'}} ref={el}></span></p>
             <p className='text-lg my-10 text-dark-400'>I'm open to new opportunities. Check out my projects and get in touch!</p>
                 <div className='my-2 flex flex-row gap-4'>

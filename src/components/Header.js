@@ -10,7 +10,7 @@ export default function Header(){
     let notExpanded = 'hidden md:block'
 
     return (
-        <header className='bg-[#1d1e26] p-4 w-full flex flex-row md:flex-col justify-between md:h-screen fixed md:sticky md:top-0 text-dark-300 z-40'>
+        <header className='bg-[#1d1e26] p-4 w-full lg:max-w-[350px] flex flex-row md:flex-col justify-between md:h-screen fixed md:sticky md:top-0 text-dark-300 z-40'>
             <div className='flex flex-row'>
                 <span className='text-2xl text-buffy hover:text-buffy-500 uppercase'>Kate Ives</span>
             </div>

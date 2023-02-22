@@ -11,12 +11,11 @@ import Contact from './components/Contact'
 
 function App() {
 
+
   return (
     <div id="home" className="flex flex-col sm:flex-row relative font-fira bg-darker-900 scroll-smooth">
       <Header/>
-      {/* <Numbers height={height}/> */}
-      
-      <div id='pageWrapper' className='relative  flex flex-col w-[85%] px-8 text-white mx-auto'>
+      <div id='pageWrapper' className='relative flex flex-col w-[85%] md:w-[80%] xl:w-[70%] px-4 md:px-8 text-white mx-auto'>
         <Hero/>
         <About/>
         <Projects/>
