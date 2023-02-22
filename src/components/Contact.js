@@ -1,4 +1,3 @@
-import SolidButton from './Buttons'
 import GithubSVG from './svg/github'
 import TwitterSVG from './svg/twitter'
 import LinkedinSVG from './svg/linkedin'
@@ -21,9 +20,8 @@ export default function Contact(){
             
         </div>
         <div className='w-full md:w-1/2 my-2'>
-            <form name='contact' method='POST' netlify-honeypot='bot-field'
-            data-netlify='true' className='w-full flex flex-col leading-8'>
-              
+            <form name='contact' method='POST' className='w-full flex flex-col leading-8'>
+            <input type="hidden" name="form-name" value="contact" />
                     <h3 className='text-xl font-semibold'>Send a Message</h3>
                     <p className='hidden'>
                         <input name='bot-field' autoComplete='off'/>
