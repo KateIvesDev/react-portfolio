@@ -29,16 +29,16 @@ export default function Contact(){
                         <input name='bot-field' autoComplete='off'/>
                     </p>
                     <label htmlFor='name'>Name</label>
-                    <input type='text' name='name' placeholder='Pam Beasley' className='w-full p-2 rounded-md' required/>
+                    <input type='text' name='name' placeholder='Pam Beasley' className='w-full p-2 rounded-md text-darker-800' required/>
                     <label htmlFor='email'>Email</label>
-                    <input type='email' name='email' placeholder='pam@theoffice.com' className='w-full p-2 rounded-md' required/>
+                    <input type='email' name='email' placeholder='pam@theoffice.com' className='w-full p-2 rounded-md text-darker-800' required/>
                     <label htmlFor='phone'>Phone</label>
-                    <input type='phone' name='phone' placeholder='123-456-7890' className='w-full p-2 rounded-md' required/>
+                    <input type='phone' name='phone' placeholder='123-456-7890' className='w-full p-2 rounded-md text-darker-800' required/>
                     <label htmlFor='email'>Company</label>
-                    <input type='text' name='company' placeholder='Dunder Mifflin' className='w-full p-2 rounded-md' required/>
+                    <input type='text' name='company' placeholder='Dunder Mifflin' className='w-full p-2 rounded-md text-darker-800' required/>
                     <label htmlFor='email'>Message</label>
-                    <textarea type='text' name='message' placeholder='My company needs a new website!' className='w-full p-2 rounded-md mb-6' required></textarea>
-                    <SolidButton type='submit' name='Submit'/>
+                    <textarea type='text' name='message' placeholder='My company needs a new website!' className='w-full p-2 rounded-md mb-6 text-darker-800' required></textarea>
+                    <button className='rounded-md bg-dracula border border-dracula text-darker-900 py-2 px-4 hover:bg-dracula-500 hover:border-dracula-500 hover:scale-105 ease-in-out max-w-1/2 font-medium m-1' type='submit' name='Submit'>Submit</button>
             </form>
         </div>
     </section> 
